@@ -1452,30 +1452,34 @@ function showSuccessMessage() {
         transform: translate(-50%, -50%);
         background: linear-gradient(135deg, #FF6B9D, #A78BFA);
         color: white;
-        padding: 40px 50px;
+        padding: clamp(20px, 5vw, 40px) clamp(25px, 6vw, 50px);
         border-radius: 25px;
         text-align: center;
         z-index: 10000;
         box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
         animation: successPop 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        max-width: 500px;
+        max-width: min(500px, 90vw);
+        width: 90vw;
         margin: 20px;
+        box-sizing: border-box;
     `;
     
     successMessage.innerHTML = `
-        <h3 style="margin: 0 0 20px 0; font-size: 2rem; font-weight: 800;">🎂 Happy Birthday my dear shooter! 🎂</h3>
-        <p style="margin: 0 0 15px 0; font-size: 1.3rem; line-height: 1.6;">You blew out all the candles! Your wish is definitely coming true! ✨</p>
-        <p style="margin: 0 0 25px 0; font-size: 1.1rem; line-height: 1.5; opacity: 0.9;">May this year be filled with endless laughter, amazing adventures, and all the happiness you deserve! 💖</p>
+        <h3 style="margin: 0 0 15px 0; font-size: clamp(1.2rem, 4vw, 2rem); font-weight: 800; text-align: center;">🎂 Happy Birthday my dear shooter! 🎂</h3>
+        <p style="margin: 0 0 12px 0; font-size: clamp(1rem, 3vw, 1.3rem); line-height: 1.6; text-align: center;">You blew out all the candles! Your wish is definitely coming true! ✨</p>
+        <p style="margin: 0 0 20px 0; font-size: clamp(0.9rem, 2.5vw, 1.1rem); line-height: 1.5; opacity: 0.9; text-align: center;">May this year be filled with endless laughter, amazing adventures, and all the happiness you deserve! 💖</p>
         <button id="closeBirthdayMessage" style="
             background: rgba(255, 255, 255, 0.2);
             color: white;
             border: 2px solid rgba(255, 255, 255, 0.3);
-            padding: 12px 25px;
+            padding: clamp(8px, 2vw, 12px) clamp(15px, 4vw, 25px);
             border-radius: 25px;
             cursor: pointer;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
             transition: all 0.3s ease;
+            display: block;
+            margin: 0 auto;
         ">
             Close Message 💕
         </button>
