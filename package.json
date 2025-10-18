@@ -1,0 +1,23 @@
+{
+  "name": "nashrah-birthday-website",
+  "version": "1.0.0",
+  "description": "A beautiful birthday website for Nashrah with interactive features",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo 'Static site - no build needed'",
+    "dev": "npx serve ."
+  },
+  "keywords": [
+    "birthday",
+    "website",
+    "interactive",
+    "lottie",
+    "animations"
+  ],
+  "author": "Nabeel",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
