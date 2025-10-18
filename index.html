@@ -9,13 +9,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     
-    <!-- Critical resource preloading -->
-    <link rel="preload" href="background-music.mp3" as="audio">
-    <link rel="preload" href="photos/2019.png" as="image">
+    <!-- Critical resource preloading - only essential files -->
     <link rel="preload" href="style.css" as="style">
     <link rel="preload" href="script.js" as="script">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h2>Loading Nashrah's Birthday Surprise...</h2>
+            <p>Preparing something special! 💖</p>
+        </div>
+    </div>
+
     <!-- Floating Elements -->
     <div class="floating-elements">
         <div class="floating-heart">💖</div>

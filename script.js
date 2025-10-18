@@ -53,6 +53,17 @@ function initializeWebsite() {
     initializeInteractiveElements();
     initializeBlowCandles();
     addEasterEggs();
+    
+    // Hide loading screen after everything is initialized
+    setTimeout(() => {
+        const loadingScreen = document.getElementById('loadingScreen');
+        if (loadingScreen) {
+            loadingScreen.classList.add('hidden');
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 500);
+        }
+    }, 2000); // Show loading for at least 2 seconds
 }
 
 // Lazy loading optimization
