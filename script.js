@@ -37,6 +37,9 @@ function initializeWebsite() {
     // Show delay message first
     showDelayMessage();
     
+    // Initialize lazy loading for images
+    initializeLazyLoading();
+    
     createFloatingElements();
     initializeSmoothScrolling();
     initializePhotoGallery();
@@ -50,6 +53,28 @@ function initializeWebsite() {
     initializeInteractiveElements();
     initializeBlowCandles();
     addEasterEggs();
+}
+
+// Lazy loading optimization
+function initializeLazyLoading() {
+    const images = document.querySelectorAll('img[loading="lazy"]');
+    
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.classList.add('loaded');
+                    observer.unobserve(img);
+                }
+            });
+        });
+        
+        images.forEach(img => imageObserver.observe(img));
+    } else {
+        // Fallback for older browsers
+        images.forEach(img => img.classList.add('loaded'));
+    }
 }
 
 // Create floating elements animation

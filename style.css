@@ -5,6 +5,23 @@
     box-sizing: border-box;
 }
 
+/* Image optimization */
+img {
+    max-width: 100%;
+    height: auto;
+    will-change: transform;
+}
+
+/* Lazy loading optimization */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
 :root {
     /* Core palette: white – pink – purple */
     --primary-color: #FF6B9D;           /* pink */

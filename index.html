@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    
+    <!-- Critical resource preloading -->
+    <link rel="preload" href="background-music.mp3" as="audio">
+    <link rel="preload" href="photos/2019.png" as="image">
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="script.js" as="script">
 </head>
 <body>
     <!-- Floating Elements -->
@@ -50,63 +56,63 @@
             <h2 class="section-title">My Cute Disney Witch</h2>
             <div class="photo-gallery-container">
                 <div class="photo-gallery-item">
-                    <img src="photos/2019.png" alt="Nashrah 2019">
+                    <img src="photos/2019.png" alt="Nashrah 2019" loading="lazy" decoding="async">
                     <div class="photo-overlay">
                         <span class="photo-caption">2019</span>
                     </div>
                 </div>
                 
                 <div class="photo-gallery-item">
-                    <img src="photos/2.jpg" alt="Beautiful Smile">
+                    <img src="photos/2.jpg" alt="Beautiful Smile" loading="lazy" decoding="async">
                     <div class="photo-overlay">
                         <span class="photo-caption">Always Gorgious</span>
                     </div>
                 </div>
                 
                 <div class="photo-gallery-item">
-                    <img src="photos/3.jpg" alt="Recent Photo">
+                    <img src="photos/3.jpg" alt="Recent Photo" loading="lazy" decoding="async">
                     <div class="photo-overlay">
                         <span class="photo-caption">2025</span>
                     </div>
                 </div>
                 
                 <div class="photo-gallery-item">
-                    <img src="photos/4.jpg" alt="Beautiful Moments">
+                    <img src="photos/4.jpg" alt="Beautiful Moments" loading="lazy" decoding="async">
                     <div class="photo-overlay">
                         <span class="photo-caption">Always Shining</span>
                     </div>
                 </div>
                 
                 <div class="photo-gallery-item">
-                    <img src="photos/2024.jpg" alt="Nashrah 2024">
+                    <img src="photos/2024.jpg" alt="Nashrah 2024" loading="lazy" decoding="async">
                     <div class="photo-overlay">
                         <span class="photo-caption">2024</span>
                     </div>
                 </div>
                 
                 <div class="photo-gallery-item">
-                    <img src="photos/7.png" alt="Special Moments">
+                    <img src="photos/7.png" alt="Special Moments" loading="lazy" decoding="async">
                     <div class="photo-overlay">
                         <span class="photo-caption">Mahilaa Mitr Don</span>
                     </div>
                 </div>
                 
                 <div class="photo-gallery-item">
-                    <img src="photos/9.jpg" alt="Beautiful Moments">
+                    <img src="photos/9.jpg" alt="Beautiful Moments" loading="lazy" decoding="async">
                     <div class="photo-overlay">
                         <span class="photo-caption">Endless</span>
                     </div>
                 </div>
                 
                 <div class="photo-gallery-item">
-                    <img src="photos/US.jpg" alt="Us Together">
+                    <img src="photos/US.jpg" alt="Us Together" loading="lazy" decoding="async">
                     <div class="photo-overlay">
                         <span class="photo-caption">US</span>
                     </div>
                 </div>
                 
                 <div class="photo-gallery-item">
-                    <img src="photos/5.JPG" alt="Beautiful Moment">
+                    <img src="photos/5.JPG" alt="Beautiful Moment" loading="lazy" decoding="async">
                     <div class="photo-overlay">
                         <span class="photo-caption">That beautifull smile</span>
                     </div>
@@ -159,7 +165,7 @@
                     </div>
                     
                     <!-- The Video -->
-                    <video muted loop autoplay playsinline class="birthday-video">
+                    <video muted loop autoplay playsinline preload="metadata" class="birthday-video">
                         <source src="photos/video.mov?v=2" type="video/quicktime">
                         <source src="photos/video.mov?v=2" type="video/mp4">
                         Your browser does not support the video tag.
